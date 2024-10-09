@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h> 
 #include "contact.h"
 #include "file.h"
 #include "populate.h"
@@ -119,15 +120,13 @@ void searchContact(AddressBook *addressBook) {
     int flag = 1;  // Control the search loop
     int n;
 
-    while (flag) 
-    {
+    while (flag) {
         // Prompt the user to choose the search criteria
-        printf("Enter your choice:\n1. Name\n2. Mobile number\n3. Email\n4. Exit\n enter choice:");
+        printf("Enter your choice:\n1. Name\n2. Mobile number\n3. Email\n4. Exit\nEnter choice: ");
         scanf("%d", &n);
-        
+
         // If user chooses to exit, break the loop
-        if (n == 4) 
-        {
+        if (n == 4) {
             flag = 0;
             break;
         }
@@ -136,47 +135,39 @@ void searchContact(AddressBook *addressBook) {
         char name[50];
         char phone[11];
         char email[50];
-        int found = 0;
-        int matchCount = 0;
+        int found = 0;  // Flag to check if any match is found
+        int matchCount = 0;  // Count of similar contacts
         int i;
 
         // Perform search based on the user's choice
         switch (n) {
         case 1:  // Search by Name
             printf("Enter the name: ");
-            scanf(" %[^\n]", name); 
-             // Read the full name
-            for ( i = 0; i < addressBook->contactCount; i++) {
-                if (strcmp(addressBook->contacts[i].name, name) == 0) {
+            scanf(" %[^\n]", name);  // Read the full name
+
+            for (i = 0; i < addressBook->contactCount; i++) {
+                // Use strcasecmp to compare names in a case-insensitive manner
+                if (strcasecmp(addressBook->contacts[i].name, name) == 0) {
+                    // If a match is found
                     found = 1;
                     matchCount++;
-                }
-                printf("Contact found:\n");
-                    printf("Name: %s\n", addressBook->contacts[i].name);
-                    printf("Mobile number: %s\n", addressBook->contacts[i].phone);
-                    printf("Email: %s\n\n", addressBook->contacts[i].email);    
-            }
-            if(matchCount==1){
+
+                    // Print the contact details
                     printf("Contact found:\n");
                     printf("Name: %s\n", addressBook->contacts[i].name);
                     printf("Mobile number: %s\n", addressBook->contacts[i].phone);
-                    printf("Email: %s\n\n", addressBook->contacts[i].email);    
+                    printf("Email: %s\n\n", addressBook->contacts[i].email);
+                }
             }
-            if(matchCount>1)
-            {
-               printf("similar contact found");
-                    printf("Name: %s\n", addressBook->contacts[i].name);
-                    printf("Mobile number: %s\n", addressBook->contacts[i].phone);
-                    printf("Email: %s\n\n", addressBook->contacts[i].email);   
-            }
-                break;
-            
-                
-            
+
+            // Check if no contact was found
             if (found == 0) {
-                printf("Contact not found\n");
+                printf("Contact not found.\n");
+            } else if (matchCount > 1) {
+                printf("Note: %d similar contacts found.\n", matchCount);
             }
             break;
+
 
         case 2:  // Search by Mobile Number
             printf("Enter the mobile number: ");
@@ -364,3 +355,4 @@ void listContacts(AddressBook *addressBook)
     } 
 }
 
+  
