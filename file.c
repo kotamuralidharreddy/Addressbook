@@ -40,12 +40,6 @@ void loadContactsFromFile(AddressBook *addressBook)
         return; // Exit the function if file opening fails
     }
 
-    
-
-
-    // Update the addressBook contact count
-
-
     // Loop to read each contact's details from the file
     else {
         while (fscanf(fp, "%[^,],%[^,],%[^\n]\n", 
