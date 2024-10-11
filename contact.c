@@ -382,6 +382,12 @@ void deleteContact(AddressBook *addressBook)
 void listContacts(AddressBook *addressBook)
 {
 
+    int i,j;
+    for(i=0;i<addressBook->contactCount-1;i++)
+    {
+        
+    }
+
     printf("List of the contacts:\n\n");
     printf("Name:\t\t\t Number:\t\t\tgmail:\t\t\n\n");
     for (int i = 0; i < addressBook->contactCount; i++)
