@@ -381,17 +381,37 @@ void deleteContact(AddressBook *addressBook)
 
 void listContacts(AddressBook *addressBook)
 {
-
-    int i,j;
-    for(i=0;i<addressBook->contactCount-1;i++)
-    {
-        
+    if (addressBook->contactCount == 0) {
+        printf("No contacts available.\n");
+        return;
     }
 
-    printf("List of the contacts:\n\n");
-    printf("Name:\t\t\t Number:\t\t\tgmail:\t\t\n\n");
-    for (int i = 0; i < addressBook->contactCount; i++)
-    {
-        printf("%-20s\t %-20s\t %-20s\n", addressBook->contacts[i].name, addressBook->contacts[i].phone, addressBook->contacts[i].email);
+    // Sorting contacts alphabetically by name
+    // Bubble sort for simplicity ( more efficient sorting algorithms)
+    for (int i = 0; i < addressBook->contactCount - 1; i++) {
+        for (int j = i + 1; j < addressBook->contactCount; j++) {
+            if (strcasecmp(addressBook->contacts[i].name, addressBook->contacts[j].name) > 0) {
+                // Swap contacts[i] and contacts[j]
+                Contact temp = addressBook->contacts[i];
+                addressBook->contacts[i] = addressBook->contacts[j];
+                addressBook->contacts[j] = temp;
+            }
+        }
     }
+
+    // Print the list of contacts
+    printf("List of Contacts:\n");
+    printf("------------------------------------------------------------\n");
+    printf("%-20s %-20s %-30s\n", "Name", "Number", "Email");
+    printf("------------------------------------------------------------\n");
+
+    for (int i = 0; i < addressBook->contactCount; i++) {
+        printf("%-20s %-20s %-30s\n", 
+            addressBook->contacts[i].name, 
+            addressBook->contacts[i].phone, 
+            addressBook->contacts[i].email);
+    }
+
+    printf("------------------------------------------------------------\n");
+    printf("Total Contacts: %d\n", addressBook->contactCount);
 }
