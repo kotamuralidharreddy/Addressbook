@@ -431,9 +431,11 @@ void editContact(AddressBook *addressBook)
 }
 
 
-void deleteContact(AddressBook *addressBook) {
+void deleteContact(AddressBook *addressBook) 
+{
     int flag = 1; // Control flag for menu loop
-    while (flag) {
+    while (flag)
+     {
         // Menu for deleting contacts
         printf("Delete the contact by:\n1.Name\n2.Mobile number\n3.Email\n4.Exit\nEnter your choice: ");
         int n;
@@ -469,16 +471,25 @@ void deleteContact(AddressBook *addressBook) {
                 }
 
                 if (count > 1) {
-                    printf("Multiple similar names found and then select exit choice: Please refine your search.\n");
+                    printf("Multiple similar names found. Please refine your search.\n");
                 } else if (!found) {
                     printf("Contact not found.\n");
                 } else {
-                    // Remove contact from the array
-                    for (int i = j; i < addressBook->contactCount - 1; i++) {
-                        addressBook->contacts[i] = addressBook->contacts[i + 1];
+                    // Confirm deletion
+                    char confirm;
+                    printf("Are you sure you want to delete this contact? (y/n): ");
+                    scanf(" %c", &confirm);
+
+                    if (confirm == 'y') {
+                        // Remove contact from the array
+                        for (int i = j; i < addressBook->contactCount - 1; i++) {
+                            addressBook->contacts[i] = addressBook->contacts[i + 1];
+                        }
+                        addressBook->contactCount--;
+                        printf("Contact deleted successfully!\n");
+                    } else {
+                        printf("Deletion cancelled.\n");
                     }
-                    addressBook->contactCount--;
-                    printf("Contact successfully deleted.\n");
                 }
                 break;
 
@@ -501,12 +512,21 @@ void deleteContact(AddressBook *addressBook) {
                 if (!found) {
                     printf("Contact not found.\n");
                 } else {
-                    // Remove contact from the array
-                    for (int i = j; i < addressBook->contactCount - 1; i++) {
-                        addressBook->contacts[i] = addressBook->contacts[i + 1];
+                    // Confirm deletion
+                    char confirm;
+                    printf("Are you sure you want to delete this contact? (y/n): ");
+                    scanf(" %c", &confirm);
+
+                    if (confirm == 'y') {
+                        // Remove contact from the array
+                        for (int i = j; i < addressBook->contactCount - 1; i++) {
+                            addressBook->contacts[i] = addressBook->contacts[i + 1];
+                        }
+                        addressBook->contactCount--;
+                        printf("Contact deleted successfully!\n");
+                    } else {
+                        printf("Deletion cancelled.\n");
                     }
-                    addressBook->contactCount--;
-                    printf("Contact successfully deleted.\n");
                 }
                 break;
 
@@ -521,51 +541,14 @@ void deleteContact(AddressBook *addressBook) {
                         printf("Contact found:\n");
                         printf("Name: %s\n", addressBook->contacts[i].name);
                         printf("Mobile number: %s\n", addressBook->contacts[i].phone);
-                        printf("Email: %s\n", addressBook->contacts[i].email);
-                        break; // Assume there's only one unique email
+
+
                     }
                 }
-
-                if (!found) {
-                    printf("Contact not found.\n");
-                } else {
-                    // Remove contact from the array
-                    for (int i = j; i < addressBook->contactCount - 1; i++) {
-                        addressBook->contacts[i] = addressBook->contacts[i + 1];
-                    }
-                    addressBook->contactCount--;
-                    printf("Contact successfully deleted.\n");
-                }
-                break;
-
-            case 4:
-                printf("Exiting delete menu.\n");
-                break;
-
-            default:
-                printf("Invalid choice. Please try again.\n");
-                break;
         }
-    }
+     }
 }
-       /*/ // Confirm deletion
-        char confirm;
-        printf("Are you sure you want to delete this contact? (y/n): ");
-        scanf(" %c", &confirm);
-
-        if (confirm == 'y' || confirm == 'Y') {
-            // Shift all contacts after the found index to the left
-            for (int i = index; i < addressBook->contactCount - 1; i++) {
-                addressBook->contacts[i] = addressBook->contacts[i + 1];
-            }
-
-            // Reduce the contact count
-            addressBook->contactCount--;
-            printf("Contact deleted successfully!\n");
-        } else {
-            printf("Deletion cancelled.\n");
-        }*/
-    
+   
 
 void listContacts(AddressBook *addressBook)
 {
