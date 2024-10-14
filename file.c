@@ -55,6 +55,6 @@ void loadContactsFromFile(AddressBook *addressBook)
     fclose(fp);
     addressBook->contactCount = i;
 
-    printf("Contacts loaded successfully.\n");
+   // printf("Contacts loaded successfully.\n");
 }
 
