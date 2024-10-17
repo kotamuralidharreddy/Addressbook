@@ -24,9 +24,13 @@
                                                      Diffculty            :Intermediate
                                                      Estimated time       :120 hours
                                                      contact              :kota.muralidharreddy@gmail.com  
-                                                                       
+                                                     Available      :github:https://github.com/kotamuralidharreddy/Addressbook                  
 
 
+
+Title of the project  :  Address Book
+ mentor guidence: Mr.poorvasan,
+                      Mr.Biplap
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
                                                         ------------- 
@@ -55,7 +59,14 @@ Address Book is a small application written in C language. It keeps track of nam
                                                            | 1.Introduction: |
                                                             -----------------
 
-Address Book Project is an application written in C language. It keeps track of names and telephone/mobile numbers and e-mail addresses. It is a console based application which uses standard I/O for adding and deleting contact names, phone numbers and e-mail addresses, searching names and associated numbers and email addresses, updating numbers and email addresses, and deleting contacts.
+The Address Book application is a basic contact management tool written in C. It serves as a lightweight utility to store, manage, and organize personal contact information, such as names, phone numbers, and email addresses. Designed to be a console-based program, it allows users to perform various operations like adding new contacts, searching for existing ones, editing contact details, and deleting unwanted entries.
+
+The primary goal of the Address Book is to provide a user-friendly way to handle contact information without the need for complex graphical interfaces. By leveraging standard input and output functions, the application delivers an interactive and straightforward experience. It also incorporates file handling capabilities, enabling users to save contact information for future retrieval, ensuring data persistence across sessions.
+
+This project serves as a practical introduction to important programming concepts such as file I/O, data structures, dynamic memory allocation, and string manipulation, making it an ideal project for learners who want to strengthen their understanding of C programming while creating a functional application.
+
+
+   
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
                                                             ------------------
@@ -556,13 +567,19 @@ ________________________________________________________________________________
                                                                   |  6.Artifacts  |
                                                                   -----------------
  
-6.1	Skeleton Code
+6.1	Skeleton Code:
+
+   github:https://github.com/kotamuralidharreddy/Addressbook
 •	
 6.2	References:
 
-
-
 •	https://en.wikipedia.org/wiki/Address_book
+     www.emertxe.com/content/c-programming/code/addressbook_src.zip
+     
+
+     mentor guidence: Mr.poorvasan,
+                      Mr.Biplap
+               
 
 
 
