@@ -1,16 +1,3 @@
-      Name                 :kota muralidhar reddy
-      Batch                :24021E
-      Roll No              :24021__006
-      Institute            :Emertxe Information Technologies
-      Faculty              :Ms.Anusha
-      Lab mentor 1         :Mr.poorvasan
-      Lab mentor 2         :Mr.Biplap
-      Project Guides       :Mr.poorvasan,Mr.Biplap
-      Project title        :Address Book
-      Type                 :Individual project
-      Diffculty        	  :Intermediate
-      Estimated time       :120 hours
-      contact              :kota.muralidharreddy@gmail.com  
 
            
 -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -22,7 +9,24 @@
                                                        -------------------
                                                        |   Address Book |
                                                        -------------------
+
+
+                                                     Name                 :kota muralidhar reddy
+                                                     Batch                :24021E
+                                                     Roll No              :24021__006
+                                                     Institute            :Emertxe Information Technologies
+                                                     Mentor               :Ms.Anusha
+                                                     Lab mentor 1         :Mr.poorvasan
+                                                     Lab mentor 2         :Mr.Biplap
+                                                     Project Guides       :Mr.poorvasan,Mr.Biplap
+                                                     Project title        :Address Book
+                                                     Type                 :Individual project
+                                                     Diffculty            :Intermediate
+                                                     Estimated time       :120 hours
+                                                     contact              :kota.muralidharreddy@gmail.com  
                                                                        
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
                                                         ------------- 
@@ -137,7 +141,8 @@ Address Book Project is an application written in C language. It keeps track of 
                                                        ------------
                                                        | 5.Output |
                                                        ------------
-
+kota@murali:/mnt/c/Users/Mural/OneDrive/Desktop/emerxte course/projects/AddressBook-NewDesign/Addressbook$ gcc *.c
+kota@murali:/mnt/c/Users/Mural/OneDrive/Desktop/emerxte course/projects/AddressBook-NewDesign/Addressbook$ ./a.out
 
 Address Book Menu:
 1. Create contact
@@ -170,7 +175,7 @@ Enter your choice: 6
 Contacts saved successfully.
 Saving and Exiting...
 
-
+_________________________________________________________________________________________________________________________________________________
      -------------------
 •    |List all contacts:|
      -------------------
@@ -214,7 +219,7 @@ vishwanth            8489061215           vishwanth@gmail.com
 Total Contacts: 20
 
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
      -----------------------
 •   | Save the address book:|
      ----------------------
@@ -222,3 +227,357 @@ Total Contacts: 20
 Enter your choice: 6
 Contacts saved successfully.
 Saving and Exiting...
+
+
+_________________________________________________________________________________________________________________________________________________
+    
+                                                             ----------------
+•                                                            |Search Contact:|
+                                                              ---------------
+_________________________________________________________________________________________________________________________________________________
+
+◦    Search a contact by name.
+◦    Search contact by phone number.
+◦    Search contact by e-mail address.
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 2
+
+---------------------------
+{Search a contact by name.}
+---------------------------
+
+Enter your choice:
+1. Name
+2. Mobile number
+3. Email
+4. Exit
+Enter choice: 1
+Enter the name: emertxe
+Contact found:
+Name: emertxe
+Mobile number: 8095557332
+Email: training@gmail.com
+
+---------------------------
+{Search a contact by number.}
+---------------------------
+
+Enter your choice:
+1. Name
+2. Mobile number
+3. Email
+4. Exit
+Enter choice: 2             
+Enter the mobile number: 8095557332
+Contact found:
+Name: emertxe
+Mobile number: 8095557332
+Email: training@gmail.com
+
+---------------------------
+{Search a contact by email.}
+---------------------------
+
+Enter your choice:
+1. Name
+2. Mobile number
+3. Email
+4. Exit
+Enter choice: 3
+Enter the email: training@gmail.com
+Contact found:
+Name: emertxe
+Mobile number: 8095557332
+Email: training@gmail.com
+
+------
+{exit}
+------
+Enter your choice:
+1. Name
+2. Mobile number
+3. Email
+4. Exit
+Enter choice: 4
+
+
+_________________________________________________________________________________________________________________________________________________
+
+                                                       --------------
+                                                       |Edit Contact:|
+                                                       --------------
+_________________________________________________________________________________________________________________________________________________
+
+◦    Edit by name.
+◦    Edit contact by phone number.
+◦    Edit contact by email address.
+
+---------------
+  Edit by name.
+----------------
+
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 3
+Search the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the chioce:1
+Enter the current contact name: emertxe
+Contact found:
+Name: emertxe
+Mobile number: 8095557332
+Email: training@gmail.com
+
+What do you want to edit?
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the choice:1
+Enter the new name: emertxe info tech
+Name successfully edited.
+
+
+------------------------------
+Edit contact by email address.|
+------------------------------
+
+What do you want to edit?
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the choice:3
+Enter the new email: trainingemertxe@gmail.com            
+Email successfully edited.
+
+
+-----------------------------
+Edit contact by phone number.|
+-----------------------------
+
+
+Search the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the chioce:2 
+Enter the current contact mobile number: 8095557332
+Contact found:
+Name: emertxe info tech
+Mobile number: 8095557332
+Email: trainingemertxe@gmail.com
+
+What do you want to edit?
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the choice:2
+Enter the new mobile number: 8095557332
+Number already exists. Please enter a unique mobile number: 8095557331
+Mobile number successfully edited.
+Search the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+ enter the chioce:4
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 6
+Contacts saved successfully.
+Saving and Exiting...
+kota@murali:/mnt/c/Users/Mural/OneDrive/Desktop/emerxte course/projects/AddressBook-NewDesign/Addressbook$ gcc *.c
+kota@murali:/mnt/c/Users/Mural/OneDrive/Desktop/emerxte course/projects/AddressBook-NewDesign/Addressbook$ ./a.out
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 5
+List of Contacts:
+------------------------------------------------------------
+Name                 Number               Email
+------------------------------------------------------------
+aditya               7829639797           aditya@gmail.com
+Ajay                 1234567899           v@gmail.com
+Amma                 7891252543           A@gmail.com
+arun                 8289901703           arun@gmail.com
+biplap sir           8789029730           bilap@gmail.com
+
+--------------------------------------------------------------------
+|emertxe info tech    8095557331           trainingemertxe@gmail.com |
+--------------------------------------------------------------------
+
+jay                  7550326052           aj@gmail.com
+karthik              9535409589           karthik@gmail.com
+mani                 9989356678           manikanta321@gmail.com
+murali               7995287103           muralidhar@gmail.com
+murali               9640204346           reddy@gmail.com
+poorvasan sir        9360038223           poorvasan@gmail.com
+praveen              9578572240           praveen17@gmail.com
+roshan               9900694586           roshan@gmail.com
+somu                 9381723305           gsomu@gmail.com
+srinivasan           9629405162           srinivas@gmail.com
+srinivasan           9629405162           srinivas@gmail.com
+srinivasan           9629405162           srinivas@gmail.com
+sudeep               6362841101           sudeep@gmail.com
+srinivasan           9629405162           srinivas@gmail.com
+sudeep               6362841101           sudeep@gmail.com
+sudeep               6362841101           sudeep@gmail.com
+varun                7892868298           varun@gmail.com
+vishnu               9677835895           vk@gmail.com
+vishwanth            8489061215           vishwanth@gmail.com
+vishwanth            8489061215           vishwanth@gmail.com
+------------------------------------------------------------
+Total Contacts: 20
+
+_________________________________________________________________________________________________________________________________________________
+
+
+                                                             -----------------
+•                                                            |Delete contact:|
+                                                              -----------------
+
+_________________________________________________________________________________________________________________________________________________                                                              
+     Delete by name.
+◦    Delete contact by phone number.
+◦    Delete contact by email address.
+
+
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 4
+Delete the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+Enter your choice: 1
+Enter the contact name to delete: emertxe info tech
+Contact found:
+Name: emertxe info tech
+Mobile number: 8095557331
+Email: trainingemertxe@gmail.com
+Are you sure you want to delete this contact? (y/n): y
+Contact deleted successfully!
+Delete the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+Enter your choice: 2
+Enter the contact mobile number to delete: 8095557331
+Contact not found.
+Delete the contact by:
+1.Name
+2.Mobile number
+3.Email
+4.Exit
+Enter your choice: 4 
+
+Address Book Menu:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Exit
+Enter your choice: 5
+List of Contacts:
+------------------------------------------------------------
+Name                 Number               Email
+------------------------------------------------------------
+aditya               7829639797           aditya@gmail.com
+Ajay                 1234567899           v@gmail.com
+Amma                 7891252543           A@gmail.com
+arun                 8289901703           arun@gmail.com
+biplap sir           8789029730           bilap@gmail.com
+emertxe              8095557332           emertxe@gmail.com
+------------------------------------------------------------
+|                                                           |
+------------------------------------------------------------
+
+jay                  7550326052           aj@gmail.com
+karthik              9535409589           karthik@gmail.com
+mani                 9989356678           manikanta321@gmail.com
+murali               9640204346           reddy@gmail.com
+murali               7995287103           muralidhar@gmail.com
+poorvasan sir        9360038223           poorvasan@gmail.com
+praveen              9578572240           praveen17@gmail.com
+roshan               9900694586           roshan@gmail.com
+somu                 9381723305           gsomu@gmail.com
+srinivasan           9629405162           srinivas@gmail.com
+sudeep               6362841101           sudeep@gmail.com
+varun                7892868298           varun@gmail.com
+vishnu               9677835895           vk@gmail.com
+vishwanth            8489061215           vishwanth@gmail.com
+------------------------------------------------------------
+Total Contacts: 20
+
+Contact deleted successfully!
+
+_________________________________________________________________________________________________________________________________________________
+
+                                                                  -----------------  
+                                                                  |  6.Artifacts  |
+                                                                  -----------------
+ 
+6.1	Skeleton Code
+•	
+6.2	References:
+
+
+
+•	https://en.wikipedia.org/wiki/Address_book
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
