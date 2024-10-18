@@ -167,6 +167,18 @@ void searchContact(AddressBook *addressBook)
 
             for (i = 0; i < addressBook->contactCount; i++)
             {
+                if (strcasestr(addressBook->contacts[i].name, name))
+                {
+                    
+                    found = 1;
+                    matchCount++;
+
+                    // Print the contact details
+                    printf("Contact found:\n");
+                    printf("Name: %s\n", addressBook->contacts[i].name);
+                    printf("Mobile number: %s\n", addressBook->contacts[i].phone);
+                    printf("Email: %s\n\n", addressBook->contacts[i].email);
+                }
                 // Use strcasecmp to compare names in a case-insensitive manner
                 if (strcasecmp(addressBook->contacts[i].name, name) == 0)
                 {
@@ -272,6 +284,18 @@ void editContact(AddressBook *addressBook)
                 scanf(" %[^\n]", name);
                 for (int i = 0; i < addressBook->contactCount; i++)
                 {
+
+                     if (strcasestr(addressBook->contacts[i].name, name))
+                    {
+                        found = 1;
+                        j = i; // Store index of found contact
+                        count++;
+                     printf("Contact found:\n");
+                    printf("Name: %s\n", addressBook->contacts[i].name);
+                    printf("Mobile number: %s\n", addressBook->contacts[i].phone);
+                    printf("Email: %s\n\n", addressBook->contacts[i].email);
+                    }
+
                     if (strcasecmp(addressBook->contacts[i].name, name) == 0)
                     {
                         found = 1;
@@ -458,7 +482,20 @@ void deleteContact(AddressBook *addressBook)
                 // Delete by name
                 printf("Enter the contact name to delete: ");
                 scanf(" %[^\n]", name);
-                for (int i = 0; i < addressBook->contactCount; i++) {
+                for (int i = 0; i < addressBook->contactCount; i++)
+                 {
+                    if (strcasestr(addressBook->contacts[i].name, name)) 
+                    {
+                        found = 1;
+                        j = i; // Store index of found contact
+                        count++;
+                        printf("Contact found:\n");
+                        printf("Name: %s\n", addressBook->contacts[i].name);
+                        printf("Mobile number: %s\n", addressBook->contacts[i].phone);
+                        printf("Email: %s\n", addressBook->contacts[i].email);
+                    }
+
+
                     if (strcasecmp(addressBook->contacts[i].name, name) == 0) {
                         found = 1;
                         j = i; // Store index of found contact
