@@ -16,9 +16,9 @@
                                                      Roll No              :24021__006
                                                      Institute            :Emertxe Information Technologies
                                                      Mentor               :Ms.Anusha
-                                                     Lab mentor 1         :Mr.poorvasan
+                                                     Lab mentor 1         :Mr.poovarasan
                                                      Lab mentor 2         :Mr.Biplap
-                                                     Project Guides       :Mr.poorvasan,Mr.Biplap
+                                                     Project Guides       :Mr.poovarasan,Mr.Biplap
                                                      Project title        :Address Book
                                                      Type                 :Individual project
                                                      Diffculty            :Intermediate
@@ -29,7 +29,7 @@
 
 
 Title of the project  :  Address Book
- mentor guidence: Mr.poorvasan,
+ mentor guidence: Mr.poovarasan,
                       Mr.Biplap
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -577,7 +577,7 @@ ________________________________________________________________________________
      www.emertxe.com/content/c-programming/code/addressbook_src.zip
      
 
-     mentor guidence: Mr.poorvasan,
+     mentor guidence: Mr.poovarasan,
                       Mr.Biplap
                
 
