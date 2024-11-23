@@ -65,7 +65,45 @@ int unique_number(AddressBook *addressBook, char *num)
 // Validate that the email ends with '@gmail.com'
 int validate_gmail(char *email)
 {
-    char check[100] = "@gmail.com";
+    char check[100] = "@";
+    // Check if email ends with "@gmail.com"
+    if (!(strstr(email, check)))
+    {
+        return 1; // Invalid email
+    }
+    return 0; // Valid email
+
+char check1[100] = ".com";
+    // Check if email ends with "@gmail.com"
+    if (!(strstr(email, check)))
+    {
+        return 1; // Invalid email
+    }
+    return 0; // Valid email
+
+    char check2[100] = ".ac.in";
+    // Check if email ends with "@gmail.com"
+    if (!(strstr(email, check)))
+    {
+        return 1; // Invalid email
+    }
+    return 0; // Valid email
+    char check2[100] = ".in";
+    // Check if email ends with "@gmail.com"
+    if (!(strstr(email, check)))
+    {
+        return 1; // Invalid email
+    }
+    return 0; // Valid email
+
+    char check4[100] = ".org";
+    // Check if email ends with "@gmail.com"
+    if (!(strstr(email, check)))
+    {
+        return 1; // Invalid email
+    }
+    return 0; // Valid email
+    char check4[100] = ".net";
     // Check if email ends with "@gmail.com"
     if (!(strstr(email, check)))
     {
@@ -73,6 +111,8 @@ int validate_gmail(char *email)
     }
     return 0; // Valid email
 }
+
+
 
 // Check if the email is unique in the address book
 int unique_email(AddressBook *addressBook, char *email)
@@ -108,7 +148,7 @@ void createContact(AddressBook *addressBook)
     scanf(" %[^\n]", num);
     while (validate_number(num) == 1 || unique_number(addressBook, num) == 1)
     {
-        printf("Phone numberis not valid & already exist, Please enter a valid unique number...\n");
+        printf("Phone numberis not valid or already exist or Please enter a correct valid unique number...\n");
         printf("Enter the mobile number: ");
         scanf(" %[^\n]", num);
     }
@@ -120,7 +160,7 @@ void createContact(AddressBook *addressBook)
     scanf(" %[^\n]", email);
     while (validate_gmail(email) == 1 || unique_email(addressBook, email) == 1)
     {
-        printf("Email is not valid &  already exist , Please enter a valid unique email...\n");
+        printf("Email is not valid or  already exist or Please enter a valid unique email...\n");
         printf("Enter the email address: ");
         scanf(" %[^\n]", email);
     }
