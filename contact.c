@@ -88,7 +88,7 @@ char check1[100] = ".com";
         return 1; // Invalid email
     }
     return 0; // Valid email
-    char check2[100] = ".in";
+    char check3[100] = ".in";
     // Check if email ends with "@gmail.com"
     if (!(strstr(email, check)))
     {
@@ -103,7 +103,7 @@ char check1[100] = ".com";
         return 1; // Invalid email
     }
     return 0; // Valid email
-    char check4[100] = ".net";
+    char check5[100] = ".net";
     // Check if email ends with "@gmail.com"
     if (!(strstr(email, check)))
     {
@@ -223,7 +223,7 @@ void searchContact(AddressBook *addressBook)
                 if (strcasecmp(addressBook->contacts[i].name, name) == 0)
                 {
                     // If a match is found
-                    found = 1;
+                   /* found = 1;
                     matchCount++;
 
                     // Print the contact details
@@ -231,6 +231,7 @@ void searchContact(AddressBook *addressBook)
                     printf("Name: %s\n", addressBook->contacts[i].name);
                     printf("Mobile number: %s\n", addressBook->contacts[i].phone);
                     printf("Email: %s\n\n", addressBook->contacts[i].email);
+                    */
                 }
             }
 
